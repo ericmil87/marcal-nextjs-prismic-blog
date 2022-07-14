@@ -120,5 +120,7 @@ export async function getStaticProps({ previewData }) {
       navigation,
       settings,
     },
+    // ADDED
+    revalidate: 60_000,
   };
 }
