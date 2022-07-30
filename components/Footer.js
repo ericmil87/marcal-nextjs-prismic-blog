@@ -37,7 +37,7 @@ const SignUpForm = ({ settings }) => {
               <input
                 name="email"
                 type="email"
-                placeholder="jane.doe@example.com"
+                placeholder="joao@exemplo.com"
                 required={true}
                 className="w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-10 text-slate-800 placeholder-slate-400"
               />
@@ -46,7 +46,7 @@ const SignUpForm = ({ settings }) => {
               type="submit"
               className="absolute top-0 right-0 bottom-0 flex items-center justify-center px-3 text-2xl text-slate-400"
             >
-              <span className="sr-only">Submit</span>
+              <span className="sr-only">Enviar</span>
               <span aria-hidden={true}>&rarr;</span>
             </button>
           </div>
@@ -68,9 +68,26 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
         <HorizontalDivider />
         {withSignUpForm && <SignUpForm settings={settings} />}
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
-          Proudly published using{" "}
+          <PrismicLink href="https://nextjs.org/" className="text-slate-700">
+            Next.JS
+          </PrismicLink>{" "}
+          and{" "}
           <PrismicLink href="https://prismic.io" className="text-slate-700">
             Prismic
+          </PrismicLink>{" "}
+          Blog made with ❤️ by{" "}
+          <PrismicLink
+            href="https://eric.milfont.net"
+            className="text-slate-700"
+          >
+            Eric Milfont @ericmilfont
+          </PrismicLink>{" "}
+          in{" "}
+          <PrismicLink
+            href="https://portodegalinhas.social"
+            className="text-slate-700"
+          >
+            Porto de Galinhas, PE - Brasil
           </PrismicLink>
         </div>
       </div>
